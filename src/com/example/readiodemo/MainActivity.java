@@ -5,8 +5,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -24,6 +29,22 @@ public class MainActivity extends Activity {
 
 	private void clearText() {
 		textView.setText("");
+	}
+
+	// onClick Event Handler or UI Button element
+	public void readJSONFile(View v) {
+		String json = readFileFromAssets("sample_data_array.json");
+		clearText();
+		textView.setText(json);
+		try {
+			JSONArray jsonArray = new JSONArray(json);
+			Log.i(getClass().getSimpleName(), "Total JSON Objects : " + jsonArray.length());
+			for (int i = 0; i < jsonArray.length(); i++) {
+				JSONObject jsonObject = jsonArray.getJSONObject(i);
+				Log.i(getClass().getSimpleName(), "JSON Object " + i + " : " + jsonObject.toString());
+			}
+		} catch (JSONException e) {
+		}
 	}
 
 	// onClick Event Handler or UI Button element

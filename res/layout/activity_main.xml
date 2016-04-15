@@ -35,7 +35,8 @@
             android:text="@string/read_json"
             android:layout_height="wrap_content"
             android:layout_width="0dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="readJSONFile"/>
         <Button
             android:id="@+id/readXMLButton"
             android:text="@string/read_xml"

@@ -1,0 +1,77 @@
+[
+  {
+    "_id": "5710ec9a70586862485ad48c",
+    "index": 0,
+    "guid": "a34abd82-5c58-4840-b6ed-1117416487da",
+    "isActive": false,
+    "balance": "$1,198.16",
+    "picture": "http://placehold.it/32x32",
+    "age": 29,
+    "eyeColor": "blue",
+    "name": {
+      "first": "Dolly",
+      "last": "Kane"
+    },
+    "company": "BULLJUICE"
+  },
+  {
+    "_id": "5710ec9a37f4608aa95a7abc",
+    "index": 1,
+    "guid": "a0e1d4be-acc4-443b-b7e0-d8b711308395",
+    "isActive": false,
+    "balance": "$3,106.19",
+    "picture": "http://placehold.it/32x32",
+    "age": 28,
+    "eyeColor": "green",
+    "name": {
+      "first": "Rowena",
+      "last": "Williams"
+    },
+    "company": "NETROPIC"
+  },
+  {
+    "_id": "5710ec9a7c2b8b431df141f2",
+    "index": 2,
+    "guid": "7d7065fc-59b9-4ec0-bc88-665d479d3f61",
+    "isActive": false,
+    "balance": "$3,677.39",
+    "picture": "http://placehold.it/32x32",
+    "age": 27,
+    "eyeColor": "brown",
+    "name": {
+      "first": "Mavis",
+      "last": "English"
+    },
+    "company": "CORPORANA"
+  },
+  {
+    "_id": "5710ec9af75c2193af757b9e",
+    "index": 3,
+    "guid": "17a4dc74-ca6b-48a4-9b1b-c243497f1f2a",
+    "isActive": false,
+    "balance": "$2,242.83",
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "eyeColor": "brown",
+    "name": {
+      "first": "Armstrong",
+      "last": "Pollard"
+    },
+    "company": "ISOSPHERE"
+  },
+  {
+    "_id": "5710ec9ac38f6bdb20da7a6b",
+    "index": 4,
+    "guid": "1234aa49-57b4-4086-8a2f-576f1adcd3d7",
+    "isActive": false,
+    "balance": "$2,270.90",
+    "picture": "http://placehold.it/32x32",
+    "age": 31,
+    "eyeColor": "blue",
+    "name": {
+      "first": "Mcintyre",
+      "last": "Boyer"
+    },
+    "company": "POSHOME"
+  }
+]
