@@ -4,10 +4,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.StringReader;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.xmlpull.v1.XmlPullParserException;
+
+import com.example.dto.Record;
+import com.example.xml.parser.RecordsXmlParser;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -31,6 +37,25 @@ public class MainActivity extends Activity {
 		textView.setText("");
 	}
 
+	// onClick Event Handler or UI Button element
+	public void readXMLFile(View v) {
+		String xml = readFileFromAssets("sample_data.xml");
+		clearText();
+		textView.setText(xml);
+
+		final RecordsXmlParser recordsXmlParser = new RecordsXmlParser();
+		try {
+			final List<Record> records = recordsXmlParser.parse(new StringReader(xml));
+			Log.i(getClass().getSimpleName(), "Total records = " + records.size());
+			for (Record record : records) {
+				Log.i(getClass().getSimpleName(), record.toString());
+			}
+		} catch (XmlPullParserException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	// onClick Event Handler or UI Button element
 	public void readJSONFile(View v) {
 		String json = readFileFromAssets("sample_data_array.json");
